@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Showcase</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        .title {
+            text-align: center;
+            padding: 40px 0;
+            font-size: 3em;
+            font-weight: bold;
+            background: linear-gradient(45deg, #2196F3, #E91E63);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            animation: titleGlow 3s ease-in-out infinite;
+        }
+
+        @keyframes titleGlow {
+            0%, 100% {
+                filter: brightness(100%);
+            }
+            50% {
+                filter: brightness(120%);
+            }
+        }
+
+        .introduction {
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+            padding: 40px;
+            margin: 30px 0;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            position: relative;
+            overflow: hidden;
+            border-left: 5px solid #2196F3;
+        }
+
+        .introduction::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, 
+                rgba(33, 150, 243, 0.1), 
+                rgba(233, 30, 99, 0.1));
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+        }
+
+        .introduction p {
+            position: relative;
+            z-index: 1;
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: #444;
+            text-align: justify;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 8px;
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .video-container {
+            background: white;
+            padding: 15px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .video-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+
+        video {
+            width: 100%;
+            border-radius: 8px;
+            border: 2px solid #f0f0f0;
+        }
+
+        @media (max-width: 768px) {
+            .video-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .title {
+                font-size: 2em;
+                padding: 20px 0;
+            }
+
+            body {
+                padding: 10px;
+            }
+
+            .introduction {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1 class="title">Project Title</h1>
+
+    <div class="introduction">
+        <p>
+            A cutting-edge solution that revolutionizes digital interactions by creating lifelike, interactive avatars capable of
+            engaging conversations in real-time. Leveraging advanced artificial intelligence and state-of-the-art natural language processing,
+            our technology transforms static images into dynamic avatars that can understand and respond to user
+            inputs with remarkable accuracy and personality. Whether you're enhancing customer service with virtual agents,
+            personalizing user experiences in gaming and virtual worlds, or creating interactive educational tools, our AI Talking 
+            Avatars provide a seamless and immersive experience. Designed for versatility and ease of integration, this innovative technology 
+            bridges the gap between humans and digital interfaces, offering intelligent, responsive, and emotionally attuned 
+            interactions that elevate engagement and satisfaction across various applications.
+        </p>
+    </div>
+
+    <div class="video-grid">
+        <div class="video-container">
+            <video 
+                controls 
+                preload="metadata"
+                crossorigin="anonymous"
+                webkit-playsinline 
+                playsinline>
+                <source src="./aimastermind/aimastermind.mp4" type="video/mp4" codecs="avc1.42E01E, mp4a.40.2">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="video-container">
+            <video controls>
+                <source src="./aimastermind/aimastermind1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="video-container">
+            <video controls>
+                <source src="./aimastermind/aimastermind2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="video-container">
+            <video controls>
+                <source src="./aimastermind/aimastermind3.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Showcase</title>
+    <style>
+        /* Previous styles remain the same until video-grid */
+
+        .tech-section {
+            margin-top: 50px;
+            padding: 40px;
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            position: relative;
+            overflow: hidden;
+            border-right: 5px solid #E91E63;
+        }
+
+        .tech-section h2 {
+            font-size: 2em;
+            color: #333;
+            margin-bottom: 20px;
+            text-align: center;
+            background: linear-gradient(45deg, #E91E63, #2196F3);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .tech-content {
+            display: flex;
+            gap: 40px;
+            align-items: flex-start;
+            justify-content: space-between;
+            position: relative;
+            z-index: 1;
+        }
+
+        .tech-description {
+            flex: 1;
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: #444;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 8px;
+        }
+
+        .tech-list {
+            flex: 1;
+            padding-left: 20px;
+        }
+
+        .tech-list ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .tech-list li {
+            margin: 15px 0;
+            padding: 10px 15px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            display: flex;
+            align-items: center;
+            transition: transform 0.3s ease;
+        }
+
+        .tech-list li:before {
+            content: "•";
+            color: #2196F3;
+            font-weight: bold;
+            margin-right: 10px;
+            font-size: 1.5em;
+        }
+
+        .tech-list li:hover {
+            transform: translateX(10px);
+            background: linear-gradient(45deg, rgba(33, 150, 243, 0.1), rgba(233, 30, 99, 0.1));
+        }
+
+        @media (max-width: 768px) {
+            .tech-content {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .tech-section {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Previous content remains the same until video-grid div -->
+
+    <div class="tech-section">
+        <h2>Technologies Behind Our AI Talking Avatar Generation</h2>
+        <div class="tech-content">
+            <div class="tech-description">
+                Our AI Talking Avatar Generation project leverages a sophisticated blend of cutting-edge technologies to deliver seamless,
+                interactive, and lifelike digital avatars. Here's an overview of the key technologies that power our solution:
+            </div>
+            <div class="tech-list">
+                <ul>
+                    <li>LLMs for text generation</li>
+                    <li>Text-to-Speech (TTS) Models</li>
+                    <li>AI LipSync Models</li>
+                    <li>Realtime Body Movement Models</li>
+                    <li>Video Generation Technology</li>
+                    <li>LivePortrait</li>
+                    <li>SadTalker</li>
+                    <li>DreamTalk</li>
+                    <li>Python-Based Front-End and Back-End Development</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
